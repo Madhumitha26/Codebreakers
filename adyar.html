@@ -1,0 +1,33 @@
+<html>
+<body>
+
+<h1>My First Google Map</h1>
+
+<div id="map" style="width:400px;height:400px;background:yellow"></div>
+
+<script>
+function myMap() {
+var LatLng = new google.maps.LatLng(13.0012,80.2565);
+var mapOptions = {
+    center: LatLng,
+    zoom: 16,
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+}
+var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+var marker = new google.maps.Marker({
+position:LatLng,
+title:"adyar"
+})
+marker.setMap(map);
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXhowoADlwNUZMc5MQlEK4Wg52AGdQMvM&callback=myMap"></script>
+<br>
+<br>
+<a href="ahospital.html"><h1><center><font color='black'>HOSPITAL </font></center></h1></a><br><br>
+<a href="astation.html"><h1><center><font color='black'>POLICE STATION</font></center></h1></a><br><br>
+<a href="acab.html"><h1><center><font color='black'>CAB</font></center></h1></a><br><br>
+</form>
+</body>
+</html>

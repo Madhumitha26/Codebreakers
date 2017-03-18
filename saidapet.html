@@ -1,0 +1,43 @@
+<html>
+<head>
+<style>
+body{
+  background-image: url("blue.jpg");
+   background-size: 1500px 1500px;
+    background-repeat: no-repeat;
+
+}
+</style>
+</head>
+<body >
+
+<h1>You are at this location </h1>
+
+<div id="map" style="width:400px;height:400px;background:yellow"></div>
+
+<script>
+function myMap() {
+var LatLng = new google.maps.LatLng(13.0252,80.2133);
+var mapOptions = {
+    center: LatLng,
+    zoom: 16,
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+}
+var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+var marker = new google.maps.Marker({
+position:LatLng,
+title:"saidapet"
+})
+marker.setMap(map);
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXhowoADlwNUZMc5MQlEK4Wg52AGdQMvM&callback=myMap"></script>
+<br>
+<br>
+<a href="shospital.html"><h1><center><font color='black'>HOSPITAL </font></center></h1></a><br><br>
+<a href="sstation.html"><h1><center><font color='black'>POLICE STATION</font></center></h1></a><br><br>
+<a href="scab.html"><h1><center><font color='black'>CAB</font></center></h1></a><br><br>
+</form>
+</body>
+</html>
